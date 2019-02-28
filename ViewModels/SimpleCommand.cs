@@ -15,12 +15,12 @@ namespace Simple_MVVM.ViewModels
         {
             add
             {
-                throw new NotImplementedException();
+                
             }
 
             remove
             {
-                throw new NotImplementedException();
+               
             }
         }
 

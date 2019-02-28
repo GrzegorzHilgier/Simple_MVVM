@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Simple_MVVM.App</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -60,9 +63,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\TextConverter.cs" />
-    <Compile Include="ViewModels\ConvertWindow.cs" />
+    <Compile Include="ViewModels\ConvertWindowModel.cs" />
     <Compile Include="ViewModels\ObservableObject.cs" />
     <Compile Include="ViewModels\SimpleCommand.cs" />
+    <Compile Include="Views\ConverterControl.xaml.cs">
+      <DependentUpon>ConverterControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ConvertWindow.xaml.cs">
       <DependentUpon>ConvertWindow.xaml</DependentUpon>
     </Compile>
@@ -95,6 +101,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Page Include="Views\ConverterControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\ConvertWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
